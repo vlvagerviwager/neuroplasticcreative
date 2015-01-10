@@ -24,6 +24,16 @@
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	    <script src="js/kube.min.js"></script>
 
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-58432217-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+
 	    <script>
 			$(function() {
 			  $('a[href*=#]:not([href=#])').click(function() {
@@ -55,28 +65,36 @@
 	<body>
 		<div class="units-row">
 		 	<div class="unit-100">
-				<header id="header" class="sticky">
+				<header id="header" class="sticky" data-tools="navigation-fixed">
+					
 					<nav class="navbar navbar-pills">
-						<ul>
+						<ul>	
+							<li>
+								<span class="logo">
+									neuroplastic creative
+								</span>
+							</li>
 							<li><a href="#">home</a></li>
 							<li><a href="#about">about</a></li>
 							<li><a href="#creative">photography & art</a></li>
 							<li><a href="#writing">writing</a></li>
 							<li><a href="#code">code</a></li>
 							<li><a href="#music">music</a></li>
-							<li><a href="#links">links</a></li>			        
+							<li><a href="#links">links</a></li>
+							<li><a href="#contact">contact</a></li>			        
 						</ul>
 					</nav>
 				</header>
 			</div>
 		</div>
 
-		<div class="units-container" style="margin-top:70px">
+		<div class="units-container">
 			<div class="units-row">
 				<div class="unit-push-10 unit-70">
-					<h1 id="about">about</h1>
-					<p>neuroplastic creative: a person who wants to do too many things.</p>
-					<p>software engineer | self-taught analog photographer and artist</p>
+					<h1 id="about" style="border-bottom: 1px solid grey">about</h1>
+					<p><b>neuroplastic creative:</b> software engineer / analog photographer / artist</p>
+					<p>I am a full-time software engineer based in Dublin, Ireland. I am looking for opportunities to collaborate and showcase my work as an analog photographer and artist.</p>
+					<p>Site design is in progress and not final. Thanks for your patience!
 
 					<h1 id="creative">photography & art</h1>
 					<p>
@@ -208,6 +226,14 @@
 						<li><a href="https://herojan.com/" target="_blank">herojan.com</a></li>
 						<li>€20 Airbnb credit for my friends - referral code <a href="https://www.airbnb.ie/c/nchong5?s=8" target="_blank">here</a></li>
 					</ul>
+
+					<h1 id="contact">contact</h1>
+					<p><a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#99;&#104;&#111;&#110;&#103;&#112;&#104;&#111;&#116;&#111;&#103;&#114;&#97;&#112;&#104;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;'>&#110;&#99;&#104;&#111;&#110;&#103;&#112;&#104;&#111;&#116;&#111;&#103;&#114;&#97;&#112;&#104;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+
+					<p>DeviantArt profile:
+					<a href="http://neuroplasticcreative.deviantart.com/">http://neuroplasticcreative.deviantart.com/</a></p>
+
+					<footer style="margin-top: 70px">© 2015 neuroplastic creative, All Rights Reserved. Do not reproduce or use without my express written permission.</footer>
 				</div>
 			</div>
 		</div>
