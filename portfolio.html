@@ -1,470 +1,669 @@
 <!DOCTYPE html>
 <html lang="en">
-  	<script>
-  		// Redirect http to https 
-		var host = "neuroplasticcreative.com";
-		if ((host == window.location.host) && (window.location.protocol != "https:"))
+<script>
+	// Redirect http to https
+	var host = "neuroplasticcreative.com";
+	if ((host == window.location.host) && (window.location.protocol != "https:"))
 		window.location.protocol = "https";
+</script>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="zky829">
+
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="pragma" content="no-cache" />
+
+	<link rel="icon" type="image/ico" href="img/favicon.ico">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="img/touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" href="img/touch-icon-iphone.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" href="img/touch-icon-iphone-precomposed.png" />
+
+	<link rel="stylesheet" href="css/kube.min.css" />
+	<link rel="stylesheet" href="css/nc.css" />
+	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/kube.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-58432217-1', 'auto');
+		ga('send', 'pageview');
 	</script>
-	
-	<head>
-	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <meta name="author" content="zky829">
 
-		<meta http-equiv="cache-control" content="max-age=0" />
-		<meta http-equiv="cache-control" content="no-cache, must-revalidate">
-		<meta http-equiv="expires" content="0" />
-		<meta http-equiv="pragma" content="no-cache" />
-
-		<link rel="icon" type="image/ico" href="img/favicon.ico">
-		<link rel="apple-touch-icon" sizes="114x114" href="img/touch-icon-114x114.png" />
-		<link rel="apple-touch-icon" sizes="72x72" href="img/touch-icon-72x72.png" />
-		<link rel="apple-touch-icon" href="img/touch-icon-iphone.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png" />
-		<link rel="apple-touch-icon-precomposed" href="img/touch-icon-iphone-precomposed.png" />
-
-		<link rel="stylesheet" href="css/kube.min.css" />
-		<link rel="stylesheet" href="css/nc.css" />
-		<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
-
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	    <script src="js/kube.min.js"></script>
-	    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-58432217-1', 'auto');
-		  ga('send', 'pageview');
-		</script>
-
-	    <script>
-			$(function() {
-			  $('a[href*=#]:not([href=#])').click(function() {
-			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
-			      var target = $(this.hash);
-			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			      if (target.length) {
-			        $('html,body').animate({
-			          scrollTop: target.offset().top
-			        }, 500);
-			        return false;
-			      }
-			    }
-			  });
+	<script>
+		$(function () {
+			$('a[href*=#]:not([href=#])').click(function () {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this
+					.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top
+						}, 500);
+						return false;
+					}
+				}
 			});
-	    </script>
+		});
+	</script>
 
-	    <script>
-		    $(document).ready(function() {
-				$(".fancybox").fancybox({
-					openEffect	: 'fade',
-					closeEffect	: 'fade',
-					nextEffect: 'none',
-					prevEffect: 'none' 
-				});
+	<script>
+		$(document).ready(function () {
+			$(".fancybox").fancybox({
+				openEffect: 'fade',
+				closeEffect: 'fade',
+				nextEffect: 'none',
+				prevEffect: 'none'
 			});
-	    </script>
+		});
+	</script>
 
-		<title>neuroplastic creative</title>
+	<title>neuroplastic creative</title>
 
-	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	    <!--[if lt IE 9]>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
 	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	    <![endif]-->
-  	</head>
+</head>
 
-	<link rel="icon" type="image/ico" href="img/favicon/favicon.ico">
+<link rel="icon" type="image/ico" href="img/favicon/favicon.ico">
 
-	<body>
-		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54b6d7387aa7df05" async="async"></script>
-		<div class="units-row">
-	 		<div class="unit-100">
-				<header id="header" class="sticky" data-tools="navigation-fixed">
-					
+<body>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54b6d7387aa7df05"
+		async="async"></script>
+	<div class="units-row">
+		<div class="unit-100">
+			<header id="header" class="sticky" data-tools="navigation-fixed">
+
 				<nav class="navbar navbar-pills">
-					<ul>	
-							<li>
-								<span class="logo">
-									neuroplastic creative
-								</span>
-							</li>
-							<li><a href="index.html">home</a></li>
-							<li><b><a href="portfolio.html">portfolio</a></b></li>
-							<li><b><a href="shop.html">shop</a></b></li>
-							<li><a href="index.html#writing">writing</a></li>
-							<li><a href="index.html#code">code</a></li>
-							<li><a href="index.html#music">music</a></li>
-							<li><a href="shala.html">yoga</a></li>
-							<li><a href="index.html#contact">contact</a></li>				        
-						</ul>
-					</nav>
-				</header>
-			</div>
+					<ul>
+						<li>
+							<span class="logo">
+								neuroplastic creative
+							</span>
+						</li>
+						<li><a href="index.html">home</a></li>
+						<li><b><a href="portfolio.html">portfolio</a></b></li>
+						<li><b><a href="shop.html">shop</a></b></li>
+						<li><a href="index.html#writing">writing</a></li>
+						<li><a href="index.html#code">code</a></li>
+						<li><a href="index.html#music">music</a></li>
+						<li><a href="shala.html">yoga</a></li>
+						<li><a href="index.html#contact">contact</a></li>
+					</ul>
+				</nav>
+			</header>
 		</div>
+	</div>
 
-		<div class="units-container">
-			<div class="units-row">
-				<div class="unit-push-10 unit-70">
-					<h1>Selected Work</h1>
-					<p><span class="badge badge-blue badge-small">?</span> Clicking on the images will open a gallery viewer. Clicking on the text will bring you to the <a href="http://neuroplasticcreative.deviantart.com/" target="_blank">DeviantArt</a> page hosting the work.</p>
-				    <nav class="nav-tabs" data-tools="tabs" data-equals="true">
-				    <ul>
-				    <li class="active"><a href="#tab1">Photography by camera</a></li>
-				    <li><a href="#tab6">Photography by location</a></li>
-				    <li><a href="#tab2">Traditional art</a></li>
-				    <li><a href="#tab3">Digital art</a></li>
-				    <li><a href="#tab4">Design</a></li>
-				    <li><a href="#tab5">CV</a></li>
-				    </ul>
-				    </nav>
-				     
-				    <div id="tab1">
-					    <div data-tools="accordion">
-						    <a href="#tab1panel1" class="accordion-title">Yashica FX-D ML 50mm 1:19</a>
-						    <div id="tab1panel1" class="accordion-panel">
-						    	<figure>
-									<a class="fancybox" rel="gallery1" title="Gyeongbokgung Palace: Technology, Antiquity by neuroplasticcreative" href="https://img09.deviantart.net/0270/i/2014/314/d/f/gyeongbokgung_palace__technology__antiquity_by_yamitoyume-d85z8tz.jpg" target="_blank">
-										<img src="https://img09.deviantart.net/0270/i/2014/314/d/f/gyeongbokgung_palace__technology__antiquity_by_yamitoyume-d85z8tz.jpg" alt="Gyeongbokgung Palace: Technology, Antiquity by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Gyeongbokgung-Palace-Technology-Antiquity-493771895" target="_blank">Gyeongbokgung Palace: Technology, Antiquity, 2014</a></figcaption>
-								</figure>
-								
-								<figure>
-									<a class="fancybox" rel="gallery1" title="La Tour Eiffel, II by neuroplasticcreative" href="https://img13.deviantart.net/6b85/i/2015/066/7/a/la_tour_eiffel__ii_by_neuroplasticcreative-d8kr0gb.jpg" target="_blank">
-										<img src="https://img13.deviantart.net/6b85/i/2015/066/7/a/la_tour_eiffel__ii_by_neuroplasticcreative-d8kr0gb.jpg" alt="La Tour Eiffel, II by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/La-Tour-Eiffel-II-518582027" target="_blank">La Tour Eiffel, II, 2014</a></figcaption>
-								</figure>
-								
-								<figure>
-									<a class="fancybox" rel="gallery1" title="La Penderie de Paris by neuroplasticcreative" href="https://img06.deviantart.net/0c64/i/2015/023/5/6/la_penderie_de_paris_by_neuroplasticcreative-d8f39hw.jpg" target="_blank">
-										<img src="https://img06.deviantart.net/0c64/i/2015/023/5/6/la_penderie_de_paris_by_neuroplasticcreative-d8f39hw.jpg" alt="La Penderie de Paris by neuroplasticcreative" />
-										</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/La-Penderie-de-Paris-509075924" target="_blank">La Penderie de Paris, 2014</a></figcaption>
-								</figure>
+	<div class="units-container">
+		<div class="units-row">
+			<div class="unit-push-10 unit-70">
+				<h1>Selected Work</h1>
+				<p><span class="badge badge-blue badge-small">?</span> Clicking on the images will open a gallery viewer.
+					Clicking on the text will bring you to the <a href="http://neuroplasticcreative.deviantart.com/"
+						target="_blank">DeviantArt</a> page hosting the work.</p>
+				<nav class="nav-tabs" data-tools="tabs" data-equals="true">
+					<ul>
+						<li class="active"><a href="#tab1">Photography by camera</a></li>
+						<li><a href="#tab6">Photography by location</a></li>
+						<li><a href="#tab2">Traditional art</a></li>
+						<li><a href="#tab3">Digital art</a></li>
+						<li><a href="#tab4">Design</a></li>
+						<li><a href="#tab5">CV</a></li>
+					</ul>
+				</nav>
 
-								<figure>
-									<a class="fancybox" rel="gallery1" title="Lan Su: Scholar's Cave by neuroplasticcreative" href="https://img03.deviantart.net/1455/i/2014/358/6/b/lan_su__scholar_s_cave_by_neuroplasticcreative-d8b1ez8.jpg" target="_blank">
-										<img src="https://img03.deviantart.net/1455/i/2014/358/6/b/lan_su__scholar_s_cave_by_neuroplasticcreative-d8b1ez8.jpg" alt="Lan Su: Scholar's Cave by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Lan-Su-Scholar-s-Cave-502271252" target="_blank">Lan Su: Scholar's Cave, 2014</a></figcaption>
-								</figure>
+				<div id="tab1">
+					<div data-tools="accordion">
+						<a href="#tab1panel1" class="accordion-title">Yashica FX-D ML 50mm 1:19</a>
+						<div id="tab1panel1" class="accordion-panel">
+							<figure>
+								<a class="fancybox" rel="gallery1"
+									title="Gyeongbokgung Palace: Technology, Antiquity by neuroplasticcreative"
+									href="https://img09.deviantart.net/0270/i/2014/314/d/f/gyeongbokgung_palace__technology__antiquity_by_yamitoyume-d85z8tz.jpg"
+									target="_blank">
+									<img
+										src="https://img09.deviantart.net/0270/i/2014/314/d/f/gyeongbokgung_palace__technology__antiquity_by_yamitoyume-d85z8tz.jpg"
+										alt="Gyeongbokgung Palace: Technology, Antiquity by neuroplasticcreative" />
+								</a>
+								<figcaption><a
+										href="http://neuroplasticcreative.deviantart.com/art/Gyeongbokgung-Palace-Technology-Antiquity-493771895"
+										target="_blank">Gyeongbokgung Palace: Technology, Antiquity, 2014</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery1" title="Lan Su: Pink II by neuroplasticcreative" href="https://img12.deviantart.net/0bba/i/2014/358/8/8/lan_su__pink_ii_by_neuroplasticcreative-d8b1dfg.jpg" target="_blank">
-										<img src="https://img12.deviantart.net/0bba/i/2014/358/8/8/lan_su__pink_ii_by_neuroplasticcreative-d8b1dfg.jpg" alt="Lan Su: Pink II by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Lan-Su-Pink-II-502269244" target="_blank">Lan Su: Pink II, 2014</a></figcaption>
-								</figure>
+							<figure>
+								<a class="fancybox" rel="gallery1" title="La Tour Eiffel, II by neuroplasticcreative"
+									href="https://img13.deviantart.net/6b85/i/2015/066/7/a/la_tour_eiffel__ii_by_neuroplasticcreative-d8kr0gb.jpg"
+									target="_blank">
+									<img
+										src="https://img13.deviantart.net/6b85/i/2015/066/7/a/la_tour_eiffel__ii_by_neuroplasticcreative-d8kr0gb.jpg"
+										alt="La Tour Eiffel, II by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/La-Tour-Eiffel-II-518582027"
+										target="_blank">La Tour Eiffel, II, 2014</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery1" title="Who Are You? by neuroplasticcreative" href="https://img03.deviantart.net/3819/i/2014/312/1/9/who_are_you__by_yamitoyume-d85okpy.jpg" target="_blank">
-										<img src="https://img03.deviantart.net/3819/i/2014/312/1/9/who_are_you__by_yamitoyume-d85okpy.jpg" alt="Who Are You? by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Who-Are-You-493274086" target="_blank">Who Are You?, 2014</a></figcaption>
-								</figure>
-								
-								<figure>
-									<a class="fancybox" rel="gallery1" title="Downtown PDX: Mary's Strip Club by neuroplasticcreative" href="https://img10.deviantart.net/332e/i/2014/357/a/5/downtown_pdx__mary_s_strip_club_by_neuroplasticcreative-d8ayw0j.jpg" target="_blank">
-										<img src="https://img10.deviantart.net/332e/i/2014/357/a/5/downtown_pdx__mary_s_strip_club_by_neuroplasticcreative-d8ayw0j.jpg" alt="Downtown PDX: Mary's Strip Club by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Downtown-PDX-Mary-s-Strip-Club-502153363" target="_blank">Downtown PDX: Mary's Strip Club, 2014</a></figcaption>
-								</figure>
+							<figure>
+								<a class="fancybox" rel="gallery1" title="La Penderie de Paris by neuroplasticcreative"
+									href="https://img06.deviantart.net/0c64/i/2015/023/5/6/la_penderie_de_paris_by_neuroplasticcreative-d8f39hw.jpg"
+									target="_blank">
+									<img
+										src="https://img06.deviantart.net/0c64/i/2015/023/5/6/la_penderie_de_paris_by_neuroplasticcreative-d8f39hw.jpg"
+										alt="La Penderie de Paris by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/La-Penderie-de-Paris-509075924"
+										target="_blank">La Penderie de Paris, 2014</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery1" title="Portland Dream by neuroplasticcreative" href="https://img10.deviantart.net/620a/i/2014/342/c/b/portland_dream_by_yamitoyume-d895bap.jpg" target="_blank">
-										<img src="https://img10.deviantart.net/620a/i/2014/342/c/b/portland_dream_by_yamitoyume-d895bap.jpg" alt="Portland Dream by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Portland-Dream-499093873" target="_blank">Portland Dream, 2014</a></figcaption>
-								</figure>
+							<figure>
+								<a class="fancybox" rel="gallery1" title="Lan Su: Scholar's Cave by neuroplasticcreative"
+									href="https://img03.deviantart.net/1455/i/2014/358/6/b/lan_su__scholar_s_cave_by_neuroplasticcreative-d8b1ez8.jpg"
+									target="_blank">
+									<img
+										src="https://img03.deviantart.net/1455/i/2014/358/6/b/lan_su__scholar_s_cave_by_neuroplasticcreative-d8b1ez8.jpg"
+										alt="Lan Su: Scholar's Cave by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Lan-Su-Scholar-s-Cave-502271252"
+										target="_blank">Lan Su: Scholar's Cave, 2014</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery1" title="Gwanghwamun: Crossing by neuroplasticcreative" href="https://img14.deviantart.net/a68f/i/2014/314/7/c/gwanghwamun__crossing_by_yamitoyume-d85yuus.jpg" target="_blank">
-										<img src="https://img14.deviantart.net/a68f/i/2014/314/7/c/gwanghwamun__crossing_by_yamitoyume-d85yuus.jpg" alt="Gwanghwamun: Crossing by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Gwanghwamun-Crossing-493753780" target="_blank">Gwanghwamun: Crossing, 2014</a></figcaption>
-								</figure>
+							<figure>
+								<a class="fancybox" rel="gallery1" title="Lan Su: Pink II by neuroplasticcreative"
+									href="https://img12.deviantart.net/0bba/i/2014/358/8/8/lan_su__pink_ii_by_neuroplasticcreative-d8b1dfg.jpg"
+									target="_blank">
+									<img
+										src="https://img12.deviantart.net/0bba/i/2014/358/8/8/lan_su__pink_ii_by_neuroplasticcreative-d8b1dfg.jpg"
+										alt="Lan Su: Pink II by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Lan-Su-Pink-II-502269244"
+										target="_blank">Lan Su: Pink II, 2014</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery1" title="Harmony by neuroplasticcreative" href="https://img10.deviantart.net/4cf1/i/2014/256/5/9/harmony_by_yamitoyume-d7yzzzg.jpg" target="_blank">
-										<img src="https://img10.deviantart.net/4cf1/i/2014/256/5/9/harmony_by_yamitoyume-d7yzzzg.jpg" alt="Harmony by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Harmony-482049772" target="_blank">Harmony, 2014</a></figcaption>
-								</figure>
+							<figure>
+								<a class="fancybox" rel="gallery1" title="Who Are You? by neuroplasticcreative"
+									href="https://img03.deviantart.net/3819/i/2014/312/1/9/who_are_you__by_yamitoyume-d85okpy.jpg"
+									target="_blank">
+									<img src="https://img03.deviantart.net/3819/i/2014/312/1/9/who_are_you__by_yamitoyume-d85okpy.jpg"
+										alt="Who Are You? by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Who-Are-You-493274086"
+										target="_blank">Who Are You?, 2014</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery1" title="Rustic by neuroplasticcreative" href="https://img02.deviantart.net/ee71/i/2014/256/e/8/rustic_by_yamitoyume-d7z01pe.jpg" target="_blank">
-										<img src="https://img02.deviantart.net/ee71/i/2014/256/e/8/rustic_by_yamitoyume-d7z01pe.jpg" alt="Rustic by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Rustic-482052002" target="_blank">Rustic, 2014</a></figcaption>
-								</figure>
-						    </div>
-					    
-						    <a href="#tab1panel2" class="accordion-title">Holga 135BC</a>
-						    <div id="tab1panel2" class="accordion-panel">
-						    		<figure>
-									<a class="fancybox" rel="gallery2" title="The Met: Artificial Light by neuroplasticcreative" href="https://img06.deviantart.net/3be6/i/2015/297/3/6/the_met__artificial_light_by_neuroplasticcreative-d9e92fo.jpg" target="_blank">
-										<img src="https://img06.deviantart.net/3be6/i/2015/297/3/6/the_met__artificial_light_by_neuroplasticcreative-d9e92fo.jpg" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/The-Met-Artificial-Light-568133268" target="_blank">The Met: Artificial Light, 2015</a></figcaption>
-								</figure>
-								
-								<figure>
-									<a class="fancybox" rel="gallery2" title="Skin City by neuroplasticcreative" href="https://orig02.deviantart.net/918a/f/2014/060/0/0/skin_city_by_yamitoyume-d78g8a2.jpg" target="_blank">
-										<img src="https://orig02.deviantart.net/918a/f/2014/060/0/0/skin_city_by_yamitoyume-d78g8a2.jpg" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Skin-City-437457386" target="_blank">Skin City, 2014</a></figcaption>
-								</figure>
+							<figure>
+								<a class="fancybox" rel="gallery1" title="Downtown PDX: Mary's Strip Club by neuroplasticcreative"
+									href="https://img10.deviantart.net/332e/i/2014/357/a/5/downtown_pdx__mary_s_strip_club_by_neuroplasticcreative-d8ayw0j.jpg"
+									target="_blank">
+									<img
+										src="https://img10.deviantart.net/332e/i/2014/357/a/5/downtown_pdx__mary_s_strip_club_by_neuroplasticcreative-d8ayw0j.jpg"
+										alt="Downtown PDX: Mary's Strip Club by neuroplasticcreative" />
+								</a>
+								<figcaption><a
+										href="http://neuroplasticcreative.deviantart.com/art/Downtown-PDX-Mary-s-Strip-Club-502153363"
+										target="_blank">Downtown PDX: Mary's Strip Club, 2014</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery2" title="San Antonio in Holga 135BC: They Keep Watch by neuroplasticcreative" href="https://img12.deviantart.net/75bb/i/2014/228/8/f/san_antonio_in_holga_135bc__they_keep_watch_by_yamitoyume-d7vdde7.jpg" target="_blank">
-										<img src="https://img12.deviantart.net/75bb/i/2014/228/8/f/san_antonio_in_holga_135bc__they_keep_watch_by_yamitoyume-d7vdde7.jpg" alt="San Antonio in Holga 135BC: They Keep Watch by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/San-Antonio-in-Holga-135BC-They-Keep-Watch-475955215" target="_blank">They Keep Watch, 2013</a></figcaption>
-								</figure>
+							<figure>
+								<a class="fancybox" rel="gallery1" title="Portland Dream by neuroplasticcreative"
+									href="https://img10.deviantart.net/620a/i/2014/342/c/b/portland_dream_by_yamitoyume-d895bap.jpg"
+									target="_blank">
+									<img src="https://img10.deviantart.net/620a/i/2014/342/c/b/portland_dream_by_yamitoyume-d895bap.jpg"
+										alt="Portland Dream by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Portland-Dream-499093873"
+										target="_blank">Portland Dream, 2014</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery2" title="Wien in Holga 135BC: Split Into Me by neuroplasticcreative" href="https://img14.deviantart.net/d401/i/2014/207/5/4/wien_in_holga_135bc__split_into_me_by_yamitoyume-d7sdlkl.jpg" target="_blank">
-										<img src="https://img14.deviantart.net/d401/i/2014/207/5/4/wien_in_holga_135bc__split_into_me_by_yamitoyume-d7sdlkl.jpg" alt="Wien in Holga 135BC: Split Into Me by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Holga-135BC-Split-Into-Me-470926965" target="_blank">Split Into Me, 2014</a></figcaption>
-								</figure>
+							<figure>
+								<a class="fancybox" rel="gallery1" title="Gwanghwamun: Crossing by neuroplasticcreative"
+									href="https://img14.deviantart.net/a68f/i/2014/314/7/c/gwanghwamun__crossing_by_yamitoyume-d85yuus.jpg"
+									target="_blank">
+									<img
+										src="https://img14.deviantart.net/a68f/i/2014/314/7/c/gwanghwamun__crossing_by_yamitoyume-d85yuus.jpg"
+										alt="Gwanghwamun: Crossing by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Gwanghwamun-Crossing-493753780"
+										target="_blank">Gwanghwamun: Crossing, 2014</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery2" title="Wien in Holga 135BC: Carved Pigeon by neuroplasticcreative" href="https://img11.deviantart.net/2008/i/2014/207/5/c/wien_in_holga_135bc__carved_pigeon_by_yamitoyume-d7sdkze.jpg" target="_blank">
-										<img src="https://img11.deviantart.net/2008/i/2014/207/5/c/wien_in_holga_135bc__carved_pigeon_by_yamitoyume-d7sdkze.jpg" alt="Wien in Holga 135BC: Carved Pigeon by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Holga-135BC-Carved-Pigeon-470926202" target="_blank">Carved Pigeon, 2014</a></figcaption>
-								</figure>
+							<figure>
+								<a class="fancybox" rel="gallery1" title="Harmony by neuroplasticcreative"
+									href="https://img10.deviantart.net/4cf1/i/2014/256/5/9/harmony_by_yamitoyume-d7yzzzg.jpg"
+									target="_blank">
+									<img src="https://img10.deviantart.net/4cf1/i/2014/256/5/9/harmony_by_yamitoyume-d7yzzzg.jpg"
+										alt="Harmony by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Harmony-482049772"
+										target="_blank">Harmony, 2014</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery2" title="Dallas in Holga 135BC: Dallas Art Museum by neuroplasticcreative" href="https://pre06.deviantart.net/3768/th/pre/f/2013/138/f/a/fa2ee6ce68457197983ef344b15e3886-d65ozxi.png" target="_blank">
-										<img src="https://pre06.deviantart.net/3768/th/pre/f/2013/138/f/a/fa2ee6ce68457197983ef344b15e3886-d65ozxi.png" alt="Dallas in Holga 135BC: Dallas Art Museum by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Dallas-in-Holga-135BC-Dallas-Art-Museum-372361446" target="_blank">Dallas Art Museum, 2013</a></figcaption>
-								</figure>
-						    </div>
-							
-							<a href="#tab1panel3" class="accordion-title">Diana Mini</a>
-						    <div id="tab1panel3" class="accordion-panel">
-								<figure>
-									<a class="fancybox" rel="gallery6" title="Wien in Diana Mini: Schreygasse by neuroplasticcreative" href="https://img08.deviantart.net/07e0/i/2014/200/2/e/wien_in_diana_mini__schreygasse_by_yamitoyume-d7rbvc4.jpg" target="_blank">
-										<img src="https://img08.deviantart.net/07e0/i/2014/200/2/e/wien_in_diana_mini__schreygasse_by_yamitoyume-d7rbvc4.jpg" alt="Wien in Diana Mini: Schreygasse by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Diana-Mini-Schreygasse-469166692" target="_blank">Schreygasse, 2014</a></figcaption>
-								</figure>	
+							<figure>
+								<a class="fancybox" rel="gallery1" title="Rustic by neuroplasticcreative"
+									href="https://img02.deviantart.net/ee71/i/2014/256/e/8/rustic_by_yamitoyume-d7z01pe.jpg"
+									target="_blank">
+									<img src="https://img02.deviantart.net/ee71/i/2014/256/e/8/rustic_by_yamitoyume-d7z01pe.jpg"
+										alt="Rustic by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Rustic-482052002"
+										target="_blank">Rustic, 2014</a></figcaption>
+							</figure>
+						</div>
 
-								<figure>
-									<a class="fancybox" rel="gallery6" title="Wien in Diana Mini: Shuffle God by neuroplasticcreative" href="https://img08.deviantart.net/6f5c/i/2014/200/e/a/wien_in_diana_mini__shuffle_god_by_yamitoyume-d7rbvm7.jpg" target="_blank">
-										<img src="https://img08.deviantart.net/6f5c/i/2014/200/e/a/wien_in_diana_mini__shuffle_god_by_yamitoyume-d7rbvm7.jpg" alt="Wien in Diana Mini: Shuffle God by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Diana-Mini-Shuffle-God-469167055" target="_blank">Shuffle God, 2014</a></figcaption>
-								</figure>
+						<a href="#tab1panel2" class="accordion-title">Holga 135BC</a>
+						<div id="tab1panel2" class="accordion-panel">
+							<figure>
+								<a class="fancybox" rel="gallery2" title="The Met: Artificial Light by neuroplasticcreative"
+									href="https://img06.deviantart.net/3be6/i/2015/297/3/6/the_met__artificial_light_by_neuroplasticcreative-d9e92fo.jpg"
+									target="_blank">
+									<img
+										src="https://img06.deviantart.net/3be6/i/2015/297/3/6/the_met__artificial_light_by_neuroplasticcreative-d9e92fo.jpg" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/The-Met-Artificial-Light-568133268"
+										target="_blank">The Met: Artificial Light, 2015</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery6" title="Wien in Diana Mini: Stephansdom Tall by neuroplasticcreative" href="https://img10.deviantart.net/43a9/i/2014/200/e/d/wien_in_diana_mini__stephansdom_tall_by_yamitoyume-d7rbwh7.jpg" target="_blank">
-										<img src="https://img10.deviantart.net/43a9/i/2014/200/e/d/wien_in_diana_mini__stephansdom_tall_by_yamitoyume-d7rbwh7.jpg" alt="Wien in Diana Mini: Stephansdom Tall by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Diana-Mini-Stephansdom-Tall-469168171" target="_blank">Stephansdom Tall, 2014</a></figcaption>
-								</figure>	
+							<figure>
+								<a class="fancybox" rel="gallery2" title="Skin City by neuroplasticcreative"
+									href="https://orig02.deviantart.net/918a/f/2014/060/0/0/skin_city_by_yamitoyume-d78g8a2.jpg"
+									target="_blank">
+									<img src="https://orig02.deviantart.net/918a/f/2014/060/0/0/skin_city_by_yamitoyume-d78g8a2.jpg" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Skin-City-437457386"
+										target="_blank">Skin City, 2014</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery6" title="Wien in Diana Mini: Belvedere Palace I by neuroplasticcreative" href="https://img07.deviantart.net/d718/i/2014/200/8/5/wien_in_diana_mini__belvedere_palace_i_by_yamitoyume-d7rby1s.jpg" target="_blank">
-										<img src="https://img07.deviantart.net/d718/i/2014/200/8/5/wien_in_diana_mini__belvedere_palace_i_by_yamitoyume-d7rby1s.jpg" alt="Wien in Diana Mini: Belvedere Palace I by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Diana-Mini-Belvedere-Palace-I-469170208" target="_blank">Belvedere Palace I, 2014</a></figcaption>
-								</figure>
+							<figure>
+								<a class="fancybox" rel="gallery2"
+									title="San Antonio in Holga 135BC: They Keep Watch by neuroplasticcreative"
+									href="https://img12.deviantart.net/75bb/i/2014/228/8/f/san_antonio_in_holga_135bc__they_keep_watch_by_yamitoyume-d7vdde7.jpg"
+									target="_blank">
+									<img
+										src="https://img12.deviantart.net/75bb/i/2014/228/8/f/san_antonio_in_holga_135bc__they_keep_watch_by_yamitoyume-d7vdde7.jpg"
+										alt="San Antonio in Holga 135BC: They Keep Watch by neuroplasticcreative" />
+								</a>
+								<figcaption><a
+										href="http://neuroplasticcreative.deviantart.com/art/San-Antonio-in-Holga-135BC-They-Keep-Watch-475955215"
+										target="_blank">They Keep Watch, 2013</a></figcaption>
+							</figure>
 
-								<figure>
-									<a class="fancybox" rel="gallery6" title="Wien in Diana Mini: Urban Peach by neuroplasticcreative" href="https://img12.deviantart.net/62ba/i/2014/200/0/f/wien_in_diana_mini__urban_peach_by_yamitoyume-d7rbvge.jpg" target="_blank">
-										<img src="https://img12.deviantart.net/62ba/i/2014/200/0/f/wien_in_diana_mini__urban_peach_by_yamitoyume-d7rbvge.jpg" alt="Wien in Diana Mini: Urban Peach by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Diana-Mini-Urban-Peach-469166846" target="_blank">Urban Peach, 2014</a></figcaption>
-								</figure>
-					    	</div>
+							<figure>
+								<a class="fancybox" rel="gallery2" title="Wien in Holga 135BC: Split Into Me by neuroplasticcreative"
+									href="https://img14.deviantart.net/d401/i/2014/207/5/4/wien_in_holga_135bc__split_into_me_by_yamitoyume-d7sdlkl.jpg"
+									target="_blank">
+									<img
+										src="https://img14.deviantart.net/d401/i/2014/207/5/4/wien_in_holga_135bc__split_into_me_by_yamitoyume-d7sdlkl.jpg"
+										alt="Wien in Holga 135BC: Split Into Me by neuroplasticcreative" />
+								</a>
+								<figcaption><a
+										href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Holga-135BC-Split-Into-Me-470926965"
+										target="_blank">Split Into Me, 2014</a></figcaption>
+							</figure>
 
-							<a href="#tab1panel4" class="accordion-title">Publications</a>
-						    <div id="tab1panel4" class="accordion-panel">
-								<ul>
-									<li>2014
+							<figure>
+								<a class="fancybox" rel="gallery2" title="Wien in Holga 135BC: Carved Pigeon by neuroplasticcreative"
+									href="https://img11.deviantart.net/2008/i/2014/207/5/c/wien_in_holga_135bc__carved_pigeon_by_yamitoyume-d7sdkze.jpg"
+									target="_blank">
+									<img
+										src="https://img11.deviantart.net/2008/i/2014/207/5/c/wien_in_holga_135bc__carved_pigeon_by_yamitoyume-d7sdkze.jpg"
+										alt="Wien in Holga 135BC: Carved Pigeon by neuroplasticcreative" />
+								</a>
+								<figcaption><a
+										href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Holga-135BC-Carved-Pigeon-470926202"
+										target="_blank">Carved Pigeon, 2014</a></figcaption>
+							</figure>
+
+							<figure>
+								<a class="fancybox" rel="gallery2"
+									title="Dallas in Holga 135BC: Dallas Art Museum by neuroplasticcreative"
+									href="https://pre06.deviantart.net/3768/th/pre/f/2013/138/f/a/fa2ee6ce68457197983ef344b15e3886-d65ozxi.png"
+									target="_blank">
+									<img
+										src="https://pre06.deviantart.net/3768/th/pre/f/2013/138/f/a/fa2ee6ce68457197983ef344b15e3886-d65ozxi.png"
+										alt="Dallas in Holga 135BC: Dallas Art Museum by neuroplasticcreative" />
+								</a>
+								<figcaption><a
+										href="http://neuroplasticcreative.deviantart.com/art/Dallas-in-Holga-135BC-Dallas-Art-Museum-372361446"
+										target="_blank">Dallas Art Museum, 2013</a></figcaption>
+							</figure>
+						</div>
+
+						<a href="#tab1panel3" class="accordion-title">Diana Mini</a>
+						<div id="tab1panel3" class="accordion-panel">
+							<figure>
+								<a class="fancybox" rel="gallery6" title="Wien in Diana Mini: Schreygasse by neuroplasticcreative"
+									href="https://img08.deviantart.net/07e0/i/2014/200/2/e/wien_in_diana_mini__schreygasse_by_yamitoyume-d7rbvc4.jpg"
+									target="_blank">
+									<img
+										src="https://img08.deviantart.net/07e0/i/2014/200/2/e/wien_in_diana_mini__schreygasse_by_yamitoyume-d7rbvc4.jpg"
+										alt="Wien in Diana Mini: Schreygasse by neuroplasticcreative" />
+								</a>
+								<figcaption><a
+										href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Diana-Mini-Schreygasse-469166692"
+										target="_blank">Schreygasse, 2014</a></figcaption>
+							</figure>
+
+							<figure>
+								<a class="fancybox" rel="gallery6" title="Wien in Diana Mini: Shuffle God by neuroplasticcreative"
+									href="https://img08.deviantart.net/6f5c/i/2014/200/e/a/wien_in_diana_mini__shuffle_god_by_yamitoyume-d7rbvm7.jpg"
+									target="_blank">
+									<img
+										src="https://img08.deviantart.net/6f5c/i/2014/200/e/a/wien_in_diana_mini__shuffle_god_by_yamitoyume-d7rbvm7.jpg"
+										alt="Wien in Diana Mini: Shuffle God by neuroplasticcreative" />
+								</a>
+								<figcaption><a
+										href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Diana-Mini-Shuffle-God-469167055"
+										target="_blank">Shuffle God, 2014</a></figcaption>
+							</figure>
+
+							<figure>
+								<a class="fancybox" rel="gallery6" title="Wien in Diana Mini: Stephansdom Tall by neuroplasticcreative"
+									href="https://img10.deviantart.net/43a9/i/2014/200/e/d/wien_in_diana_mini__stephansdom_tall_by_yamitoyume-d7rbwh7.jpg"
+									target="_blank">
+									<img
+										src="https://img10.deviantart.net/43a9/i/2014/200/e/d/wien_in_diana_mini__stephansdom_tall_by_yamitoyume-d7rbwh7.jpg"
+										alt="Wien in Diana Mini: Stephansdom Tall by neuroplasticcreative" />
+								</a>
+								<figcaption><a
+										href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Diana-Mini-Stephansdom-Tall-469168171"
+										target="_blank">Stephansdom Tall, 2014</a></figcaption>
+							</figure>
+
+							<figure>
+								<a class="fancybox" rel="gallery6"
+									title="Wien in Diana Mini: Belvedere Palace I by neuroplasticcreative"
+									href="https://img07.deviantart.net/d718/i/2014/200/8/5/wien_in_diana_mini__belvedere_palace_i_by_yamitoyume-d7rby1s.jpg"
+									target="_blank">
+									<img
+										src="https://img07.deviantart.net/d718/i/2014/200/8/5/wien_in_diana_mini__belvedere_palace_i_by_yamitoyume-d7rby1s.jpg"
+										alt="Wien in Diana Mini: Belvedere Palace I by neuroplasticcreative" />
+								</a>
+								<figcaption><a
+										href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Diana-Mini-Belvedere-Palace-I-469170208"
+										target="_blank">Belvedere Palace I, 2014</a></figcaption>
+							</figure>
+
+							<figure>
+								<a class="fancybox" rel="gallery6" title="Wien in Diana Mini: Urban Peach by neuroplasticcreative"
+									href="https://img12.deviantart.net/62ba/i/2014/200/0/f/wien_in_diana_mini__urban_peach_by_yamitoyume-d7rbvge.jpg"
+									target="_blank">
+									<img
+										src="https://img12.deviantart.net/62ba/i/2014/200/0/f/wien_in_diana_mini__urban_peach_by_yamitoyume-d7rbvge.jpg"
+										alt="Wien in Diana Mini: Urban Peach by neuroplasticcreative" />
+								</a>
+								<figcaption><a
+										href="http://neuroplasticcreative.deviantart.com/art/Wien-in-Diana-Mini-Urban-Peach-469166846"
+										target="_blank">Urban Peach, 2014</a></figcaption>
+							</figure>
+						</div>
+
+						<a href="#tab1panel4" class="accordion-title">Publications</a>
+						<div id="tab1panel4" class="accordion-panel">
+							<ul>
+								<li>2014
+									<ul>
+										<li><a href="http://yamitoyume.deviantart.com/art/Photobook-Wien-in-Lomo-480607455"
+												target="_blank">Wien in Lomo</a>, self-published</li>
 										<ul>
-											<li><a href="http://yamitoyume.deviantart.com/art/Photobook-Wien-in-Lomo-480607455" target="_blank">Wien in Lomo</a>, self-published</li>
-											<ul>
-												<li>7" x 9"</li>
-												<li>sRGB | Silver Halide and Digital Offset</li>
-												<li><i>Wien in Lomo is inspired by the photographer's first visit to the beautiful city of Vienna, Austria. Armed with a Holga 135BC, acquiring a Diana Mini on the way, and constantly running out of film, Wien in Lomo is an instrument with which to share a wonder and love for Vienna with the rest of the world.</i></li>
-											</ul>
+											<li>7" x 9"</li>
+											<li>sRGB | Silver Halide and Digital Offset</li>
+											<li><i>Wien in Lomo is inspired by the photographer's first visit to the beautiful city of Vienna,
+													Austria. Armed with a Holga 135BC, acquiring a Diana Mini on the way, and constantly running
+													out of film, Wien in Lomo is an instrument with which to share a wonder and love for Vienna
+													with the rest of the world.</i></li>
 										</ul>
-									</li>
-								</ul>
-					    	</div>
-					    </div>
-				    </div>
-
-					<div id="tab6">
-				    	<p>2015</p>
-				    	<ul>		<li>New York City, USA (upload in progress...)</li>	
-							<li><a href="http://neuroplasticcreative.deviantart.com/gallery/54675151/Grand-Canal-Dock-Dublin-2015" target="_blank">Grand Canal Dock, Dublin, Ireland</a></li>	
-							<li><a href="http://neuroplasticcreative.deviantart.com/gallery/55540710/London-2015" target="_blank">London, England</li>
-							<li><a href="http://neuroplasticcreative.deviantart.com/gallery/55540709/Brick-Lane-2015" target="_blank">Brick Lane, London, England</a></li>
-							<li><a href="http://neuroplasticcreative.deviantart.com/gallery/55540153/Bath-2015" target="_blank">Bath, England</a></li>
-				    	</ul>
-				    	
-				    	<p>2014</p>
-				    	<ul>
-				    		<li><a href="http://neuroplasticcreative.deviantart.com/gallery/52957269/Paris-2014" target="_blank">Paris, France</a></li>
-				    		<li>Portland, OR, USA (organisation in progress...)</li>
-				    		<li>Seoul, South Korea (organisation in progress...)</li>
-							<li><a href="http://neuroplasticcreative.deviantart.com/gallery/50328124/Wien-in-Diana-Mini-2014" target="_blank">Vienna, Austria (Diana Mini)</a></li>
-							<li><a href="http://neuroplasticcreative.deviantart.com/gallery/50328116/Wien-in-Holga-135BC-2014" target="_blank">Vienna, Austria (Holga 135BC)</a></li>
-				    		<li><a href="http://neuroplasticcreative.deviantart.com/gallery/48373061/Temple-Bar-in-Holga-135BC-2014" target="_blank">Temple Bar, Dublin, Ireland</a></li>
-				    	</ul>
-				    	
-				    	<p>2013</p>
-				    	<ul>
-				    		<li><a href="http://neuroplasticcreative.deviantart.com/gallery/48373032/Stockholm-in-Holga-135BC-2013" target="_blank">Stockholm, Sweden</a></li>
-							<li><a href="http://neuroplasticcreative.deviantart.com/gallery/50790520/San-Antonio-in-Holga-135BC-2013" target="_blank">San Antonio, TX, USA</a></li>
-				    		<li><a href="http://neuroplasticcreative.deviantart.com/gallery/48373046/Dallas-in-Holga-135BC-2013" target="_blank">Dallas, TX, USA</a></li>
-				    	</ul>
-				    </div>
-
-				    <div id="tab2">
-				    	<div data-tools="accordion">
-						    <a href="#tab2panel1" class="accordion-title">Acrylic on canvas</a>
-						    <div id="tab2panel1" class="accordion-panel">
-						    	<figure>
-									<a class="fancybox" rel="gallery3" title="Vermillion by neuroplasticcreative" href="https://img02.deviantart.net/d7a8/i/2015/003/4/5/vermillion_by_neuroplasticcreative-d82jagk.jpg" target="_blank">
-										<img src="https://img02.deviantart.net/d7a8/i/2015/003/4/5/vermillion_by_neuroplasticcreative-d82jagk.jpg" alt="Vermillion by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Vermillion-487988660" target="_blank">Vermillion, 2014</a></figcaption>
-								</figure>
-
-								<figure>
-									<a class="fancybox" rel="gallery3" title="Little Miss Frank by neuroplasticcreative" href="https://pre03.deviantart.net/7358/th/pre/i/2015/006/e/6/little_miss_frank_by_neuroplasticcreative-d8cgc6t.jpg" target="_blank">
-										<img src="https://pre03.deviantart.net/7358/th/pre/i/2015/006/e/6/little_miss_frank_by_neuroplasticcreative-d8cgc6t.jpg" alt="Little Miss Frank by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Little-Miss-Frank-504647093" target="_blank">Little Miss Frank, 2014</a> | <a href="http://www.deviantart.com/print/37400290/">order print</a></figcaption>
-								</figure>
-						    </div>
-
-						    <a href="#tab2panel2" class="accordion-title">Ink on paper</a>
-						    <div id="tab2panel2" class="accordion-panel">
-								<figure>
-									<a class="fancybox" rel="gallery4" title="night-time by neuroplasticcreative" href="https://orig10.deviantart.net/8315/f/2010/117/9/2/92dfcb5c9c57f64fd612fd0a671ea40b.jpg" target="_blank">
-										<img src="https://orig10.deviantart.net/8315/f/2010/117/9/2/92dfcb5c9c57f64fd612fd0a671ea40b.jpg" alt="night-time by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/night-time-162172757" target="_blank">night-time, 2010</a></figcaption>
-								</figure>
-						    </div>
-
-						    <a href="#tab2panel3" class="accordion-title">Pen on paper</a>
-						    <div id="tab2panel3" class="accordion-panel">
-								<figure>
-									<a class="fancybox" rel="gallery7" title="Adam by neuroplasticcreative" href="https://orig11.deviantart.net/2ab6/f/2015/017/7/a/adam_by_neuroplasticcreative-d8e8g7e.png" target="_blank">
-										<img src="https://orig11.deviantart.net/2ab6/f/2015/017/7/a/adam_by_neuroplasticcreative-d8e8g7e.png" alt="Adam by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Adam-507638282" target="_blank">Adam, 2015</a></figcaption>
-								</figure>
-
-								<figure>
-									<a class="fancybox" rel="gallery7" title="crow + deformity by neuroplasticcreative" href="https://img03.deviantart.net/0cf6/i/2014/019/b/e/crow___deformity_by_yamitoyume-d72u6i5.png" target="_blank">
-										<img src="https://img03.deviantart.net/0cf6/i/2014/019/b/e/crow___deformity_by_yamitoyume-d72u6i5.png" alt="Adam by neuroplasticcreative" />
-									</a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/crow-deformity-428030573" target="_blank">crow + deformity, 2014</a></figcaption>
-								</figure>
-						    </div>
-
-							<a href="#tab2panel4" class="accordion-title">Pencil on paper</a>
-						    <div id="tab2panel4" class="accordion-panel">
-								<figure>
-									<a class="fancybox" rel="gallery8" title="Anhedonia by neuroplasticcreative" href="https://orig00.deviantart.net/a093/f/2014/278/2/5/anhedonia_by_yamitoyume-d81pjhm.jpg" target="_blank"><img src="https://orig00.deviantart.net/a093/f/2014/278/2/5/anhedonia_by_yamitoyume-d81pjhm.jpg" alt="Anhedonia by neuroplasticcreative" /></a>
-									<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Anhedonia-486600682" target="_blank">Anhedonia, 2014</a></figcaption>
-								</figure>
-						    </div>
-					    </div>
-				    </div>
-
-				    <div id="tab3">
-				    	<div data-tools="accordion">
-						    <a href="#tab3panel1" class="accordion-title">Vector graphics</a>
-						    <div id="tab3panel1" class="accordion-panel">
-						    	<figure>
-								   <a class="fancybox" rel="gallery5" title="The External World fanart by neuroplasticcreative" href="https://orig05.deviantart.net/7e30/f/2012/179/7/4/the_external_world_fanart_by_yamitoyume-d557sup.png" target="_blank">
-										<img src="https://orig05.deviantart.net/7e30/f/2012/179/7/4/the_external_world_fanart_by_yamitoyume-d557sup.png" alt="The External World fanart by neuroplasticcreative" />
-								   </a>
-								   <figcaption><a href="http://neuroplasticcreative.deviantart.com/art/The-External-World-fanart-311092945" target="_blank">The External World fanart, 2012</a></figcaption>
-								</figure>
-
-						    	<figure>
-								   <a class="fancybox" rel="gallery5" title="The External World fanart 2 by neuroplasticcreative" href="https://orig01.deviantart.net/0fde/f/2014/282/b/d/external_zky_dude4_by_yamitoyume-d826w62.png" target="_blank">
-								   		<img src="https://orig01.deviantart.net/0fde/f/2014/282/b/d/external_zky_dude4_by_yamitoyume-d826w62.png" alt="The External World fanart 2 by neuroplasticcreative" />
-								   </a>
-								   <figcaption><a href="http://neuroplasticcreative.deviantart.com/art/The-External-World-fanart-2-487410266" target="_blank">The External World fanart 2, 2012</a></figcaption>
-								</figure>
-						    </div>
-					    </div>
-				    </div>
-				    
-					<div id="tab4">
-				    	<div data-tools="accordion">
-						    <a href="#tab4panel1" class="accordion-title">Branding</a>
-						    <div id="tab4panel1" class="accordion-panel">
-						    	<figure>
-									-Coming Soon- NC Yoga business card by neuroplasticcreative, 2016</a></figcaption>
-								</figure>
-						    	<figure>
-								   <a class="fancybox" rel="gallery6" title="NC Yoga logo by neuroplasticcreative" href="http://orig10.deviantart.net/df33/f/2017/071/1/c/ncyoga_by_neuroplasticcreative-db21ibq.png" target="_blank"><img src="http://orig10.deviantart.net/df33/f/2017/071/1/c/ncyoga_by_neuroplasticcreative-db21ibq.png" alt="NC Yoga logo by neuroplasticcreative" /></a>
-								    <figcaption>
-								    	<a href="http://neuroplasticcreative.deviantart.com/art/NC-Yoga-logo-668557574" target="_blank">
-								    		NC Yoga logo by neuroplasticcreative, 2016
-							    		</a>
-							    	</figcaption>
-								</figure>
-								<figure>
-								   <a class="fancybox" rel="gallery6" title="neuroplastic creative business card by neuroplasticcreative" href="https://img09.deviantart.net/0be9/i/2015/144/f/b/neuroplastic_creative_business_card_by_neuroplasticcreative-d8ukwcs.jpg" target="_blank"><img src="https://img09.deviantart.net/0be9/i/2015/144/f/b/neuroplastic_creative_business_card_by_neuroplasticcreative-d8ukwcs.jpg" alt="neuroplastic creative business card by neuroplasticcreative" /></a>
-								    <figcaption>
-								    	<a href="http://neuroplasticcreative.deviantart.com/art/neuroplastic-creative-business-card-535092940" target="_blank">
-								    	neuroplastic creative business card by neuroplasticcreative, 2015
-								    	</a>
-							    	</figcaption>
-								</figure>
-						    </div>
-
-						    <a href="#tab4panel2" class="accordion-title">UI/UX</a>
-						    <div id="tab4panel2" class="accordion-panel">
-						    	-Coming Soon- 
-						    </div>
-					    </div>
-				    </div>
-				    
-				    <div id="tab5">
-				    	<p>Photography</p>
-				    	<ul>
-				    		<li>2015, "<a href="http://neuroplasticcreative.deviantart.com/art/La-Tour-Eiffel-II-518582027" target="_blank">La Tour Eiffel, II</a>", featured in <a href="http://techgnotic.deviantart.com/journal/Exploring-The-Eiffel-Tower-s-Aesthetic-522159692" target="_blank">Formed Function: Exploring The Eiffel Tower’s Aesthetic</a></li>
-				    		<li>2015, <a href="http://neuroplasticcreative.deviantart.com/art/Photobook-Wien-in-Lomo-480607455" target="_blank"></a>Wien in Lomo</a> shortlisted for the Athens Photo Festival 2015</li>
-				    	</ul>
-				    	
-				    	<p>Group exhibition</p>
-				    	<ul>
-				    		<li>2007, Cootehill Library</li>
-				    	</ul>
-				    	<p>Translation work</p>
-				     	<ul>
-				     		<li>2015, LMF lyric translations featured in The Script Road, Macau's Annual Literary Festival</li>
-				    	</ul>
-				    </div>
-
-				    <footer style="margin-top: 70px">© 2016 neuroplastic creative, All Rights Reserved. Do not reproduce or use without my express written permission.</footer>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
+
+				<div id="tab6">
+					<p>2015</p>
+					<ul>
+						<li>New York City, USA (upload in progress...)</li>
+						<li><a href="http://neuroplasticcreative.deviantart.com/gallery/54675151/Grand-Canal-Dock-Dublin-2015"
+								target="_blank">Grand Canal Dock, Dublin, Ireland</a></li>
+						<li><a href="http://neuroplasticcreative.deviantart.com/gallery/55540710/London-2015"
+								target="_blank">London, England</li>
+						<li><a href="http://neuroplasticcreative.deviantart.com/gallery/55540709/Brick-Lane-2015"
+								target="_blank">Brick Lane, London, England</a></li>
+						<li><a href="http://neuroplasticcreative.deviantart.com/gallery/55540153/Bath-2015" target="_blank">Bath,
+								England</a></li>
+					</ul>
+
+					<p>2014</p>
+					<ul>
+						<li><a href="http://neuroplasticcreative.deviantart.com/gallery/52957269/Paris-2014" target="_blank">Paris,
+								France</a></li>
+						<li>Portland, OR, USA (organisation in progress...)</li>
+						<li>Seoul, South Korea (organisation in progress...)</li>
+						<li><a href="http://neuroplasticcreative.deviantart.com/gallery/50328124/Wien-in-Diana-Mini-2014"
+								target="_blank">Vienna, Austria (Diana Mini)</a></li>
+						<li><a href="http://neuroplasticcreative.deviantart.com/gallery/50328116/Wien-in-Holga-135BC-2014"
+								target="_blank">Vienna, Austria (Holga 135BC)</a></li>
+						<li><a href="http://neuroplasticcreative.deviantart.com/gallery/48373061/Temple-Bar-in-Holga-135BC-2014"
+								target="_blank">Temple Bar, Dublin, Ireland</a></li>
+					</ul>
+
+					<p>2013</p>
+					<ul>
+						<li><a href="http://neuroplasticcreative.deviantart.com/gallery/48373032/Stockholm-in-Holga-135BC-2013"
+								target="_blank">Stockholm, Sweden</a></li>
+						<li><a href="http://neuroplasticcreative.deviantart.com/gallery/50790520/San-Antonio-in-Holga-135BC-2013"
+								target="_blank">San Antonio, TX, USA</a></li>
+						<li><a href="http://neuroplasticcreative.deviantart.com/gallery/48373046/Dallas-in-Holga-135BC-2013"
+								target="_blank">Dallas, TX, USA</a></li>
+					</ul>
+				</div>
+
+				<div id="tab2">
+					<div data-tools="accordion">
+						<a href="#tab2panel1" class="accordion-title">Acrylic on canvas</a>
+						<div id="tab2panel1" class="accordion-panel">
+							<figure>
+								<a class="fancybox" rel="gallery3" title="Vermillion by neuroplasticcreative"
+									href="https://img02.deviantart.net/d7a8/i/2015/003/4/5/vermillion_by_neuroplasticcreative-d82jagk.jpg"
+									target="_blank">
+									<img
+										src="https://img02.deviantart.net/d7a8/i/2015/003/4/5/vermillion_by_neuroplasticcreative-d82jagk.jpg"
+										alt="Vermillion by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Vermillion-487988660"
+										target="_blank">Vermillion, 2014</a></figcaption>
+							</figure>
+
+							<figure>
+								<a class="fancybox" rel="gallery3" title="Little Miss Frank by neuroplasticcreative"
+									href="https://pre03.deviantart.net/7358/th/pre/i/2015/006/e/6/little_miss_frank_by_neuroplasticcreative-d8cgc6t.jpg"
+									target="_blank">
+									<img
+										src="https://pre03.deviantart.net/7358/th/pre/i/2015/006/e/6/little_miss_frank_by_neuroplasticcreative-d8cgc6t.jpg"
+										alt="Little Miss Frank by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Little-Miss-Frank-504647093"
+										target="_blank">Little Miss Frank, 2014</a> | <a
+										href="http://www.deviantart.com/print/37400290/">order print</a></figcaption>
+							</figure>
+						</div>
+
+						<a href="#tab2panel2" class="accordion-title">Ink on paper</a>
+						<div id="tab2panel2" class="accordion-panel">
+							<figure>
+								<a class="fancybox" rel="gallery4" title="night-time by neuroplasticcreative"
+									href="https://orig10.deviantart.net/8315/f/2010/117/9/2/92dfcb5c9c57f64fd612fd0a671ea40b.jpg"
+									target="_blank">
+									<img src="https://orig10.deviantart.net/8315/f/2010/117/9/2/92dfcb5c9c57f64fd612fd0a671ea40b.jpg"
+										alt="night-time by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/night-time-162172757"
+										target="_blank">night-time, 2010</a></figcaption>
+							</figure>
+						</div>
+
+						<a href="#tab2panel3" class="accordion-title">Pen on paper</a>
+						<div id="tab2panel3" class="accordion-panel">
+							<figure>
+								<a class="fancybox" rel="gallery7" title="Adam by neuroplasticcreative"
+									href="https://orig11.deviantart.net/2ab6/f/2015/017/7/a/adam_by_neuroplasticcreative-d8e8g7e.png"
+									target="_blank">
+									<img src="https://orig11.deviantart.net/2ab6/f/2015/017/7/a/adam_by_neuroplasticcreative-d8e8g7e.png"
+										alt="Adam by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Adam-507638282"
+										target="_blank">Adam, 2015</a></figcaption>
+							</figure>
+
+							<figure>
+								<a class="fancybox" rel="gallery7" title="crow + deformity by neuroplasticcreative"
+									href="https://img03.deviantart.net/0cf6/i/2014/019/b/e/crow___deformity_by_yamitoyume-d72u6i5.png"
+									target="_blank">
+									<img src="https://img03.deviantart.net/0cf6/i/2014/019/b/e/crow___deformity_by_yamitoyume-d72u6i5.png"
+										alt="Adam by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/crow-deformity-428030573"
+										target="_blank">crow + deformity, 2014</a></figcaption>
+							</figure>
+						</div>
+
+						<a href="#tab2panel4" class="accordion-title">Pencil on paper</a>
+						<div id="tab2panel4" class="accordion-panel">
+							<figure>
+								<a class="fancybox" rel="gallery8" title="Anhedonia by neuroplasticcreative"
+									href="https://orig00.deviantart.net/a093/f/2014/278/2/5/anhedonia_by_yamitoyume-d81pjhm.jpg"
+									target="_blank"><img
+										src="https://orig00.deviantart.net/a093/f/2014/278/2/5/anhedonia_by_yamitoyume-d81pjhm.jpg"
+										alt="Anhedonia by neuroplasticcreative" /></a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/Anhedonia-486600682"
+										target="_blank">Anhedonia, 2014</a></figcaption>
+							</figure>
+						</div>
+					</div>
+				</div>
+
+				<div id="tab3">
+					<div data-tools="accordion">
+						<a href="#tab3panel1" class="accordion-title">Vector graphics</a>
+						<div id="tab3panel1" class="accordion-panel">
+							<figure>
+								<a class="fancybox" rel="gallery5" title="The External World fanart by neuroplasticcreative"
+									href="https://orig05.deviantart.net/7e30/f/2012/179/7/4/the_external_world_fanart_by_yamitoyume-d557sup.png"
+									target="_blank">
+									<img
+										src="https://orig05.deviantart.net/7e30/f/2012/179/7/4/the_external_world_fanart_by_yamitoyume-d557sup.png"
+										alt="The External World fanart by neuroplasticcreative" />
+								</a>
+								<figcaption><a href="http://neuroplasticcreative.deviantart.com/art/The-External-World-fanart-311092945"
+										target="_blank">The External World fanart, 2012</a></figcaption>
+							</figure>
+
+							<figure>
+								<a class="fancybox" rel="gallery5" title="The External World fanart 2 by neuroplasticcreative"
+									href="https://orig01.deviantart.net/0fde/f/2014/282/b/d/external_zky_dude4_by_yamitoyume-d826w62.png"
+									target="_blank">
+									<img
+										src="https://orig01.deviantart.net/0fde/f/2014/282/b/d/external_zky_dude4_by_yamitoyume-d826w62.png"
+										alt="The External World fanart 2 by neuroplasticcreative" />
+								</a>
+								<figcaption><a
+										href="http://neuroplasticcreative.deviantart.com/art/The-External-World-fanart-2-487410266"
+										target="_blank">The External World fanart 2, 2012</a></figcaption>
+							</figure>
+						</div>
+					</div>
+				</div>
+
+				<div id="tab4">
+					<div data-tools="accordion">
+						<a href="#tab4panel1" class="accordion-title">Branding</a>
+						<div id="tab4panel1" class="accordion-panel">
+							<figure>
+								-Coming Soon- NC Yoga business card by neuroplasticcreative, 2016</a></figcaption>
+							</figure>
+							<figure>
+								<a class="fancybox" rel="gallery6" title="NC Yoga logo by neuroplasticcreative"
+									href="http://orig10.deviantart.net/df33/f/2017/071/1/c/ncyoga_by_neuroplasticcreative-db21ibq.png"
+									target="_blank"><img
+										src="http://orig10.deviantart.net/df33/f/2017/071/1/c/ncyoga_by_neuroplasticcreative-db21ibq.png"
+										alt="NC Yoga logo by neuroplasticcreative" /></a>
+								<figcaption>
+									<a href="http://neuroplasticcreative.deviantart.com/art/NC-Yoga-logo-668557574" target="_blank">
+										NC Yoga logo by neuroplasticcreative, 2016
+									</a>
+								</figcaption>
+							</figure>
+							<figure>
+								<a class="fancybox" rel="gallery6" title="neuroplastic creative business card by neuroplasticcreative"
+									href="https://img09.deviantart.net/0be9/i/2015/144/f/b/neuroplastic_creative_business_card_by_neuroplasticcreative-d8ukwcs.jpg"
+									target="_blank"><img
+										src="https://img09.deviantart.net/0be9/i/2015/144/f/b/neuroplastic_creative_business_card_by_neuroplasticcreative-d8ukwcs.jpg"
+										alt="neuroplastic creative business card by neuroplasticcreative" /></a>
+								<figcaption>
+									<a href="http://neuroplasticcreative.deviantart.com/art/neuroplastic-creative-business-card-535092940"
+										target="_blank">
+										neuroplastic creative business card by neuroplasticcreative, 2015
+									</a>
+								</figcaption>
+							</figure>
+						</div>
+
+						<a href="#tab4panel2" class="accordion-title">UI/UX</a>
+						<div id="tab4panel2" class="accordion-panel">
+							-Coming Soon-
+						</div>
+					</div>
+				</div>
+
+				<div id="tab5">
+					<p>Photography</p>
+					<ul>
+						<li>2015, "<a href="http://neuroplasticcreative.deviantart.com/art/La-Tour-Eiffel-II-518582027"
+								target="_blank">La Tour Eiffel, II</a>", featured in <a
+								href="http://techgnotic.deviantart.com/journal/Exploring-The-Eiffel-Tower-s-Aesthetic-522159692"
+								target="_blank">Formed Function: Exploring The Eiffel Tower’s Aesthetic</a></li>
+						<li>2015, <a href="http://neuroplasticcreative.deviantart.com/art/Photobook-Wien-in-Lomo-480607455"
+								target="_blank"></a>Wien in Lomo</a> shortlisted for the Athens Photo Festival 2015</li>
+					</ul>
+
+					<p>Group exhibition</p>
+					<ul>
+						<li>2007, Cootehill Library</li>
+					</ul>
+					<p>Translation work</p>
+					<ul>
+						<li>2015, LMF lyric translations featured in The Script Road, Macau's Annual Literary Festival</li>
+					</ul>
+				</div>
+
+				<footer style="margin-top: 70px">© 2020 neuroplastic creative, All Rights Reserved. Do not reproduce or use
+					without my express written permission.</footer>
 			</div>
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>
