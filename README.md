@@ -4,6 +4,6 @@ Site hosted at neuroplasticcreative.com via GitHub Pages.
 
 ## TODO
 
-- Block AI/bots
-- Make repo public again
-- Make it actually responsive
+- [x] Block AI/bots
+- [ ] Make it actually responsive
+- [ ] Make repo public again
