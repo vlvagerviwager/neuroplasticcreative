@@ -1,15 +1,9 @@
-# splash
+# Neuroplastic Creative
 
-Splash page for neuroplasticcreative.com.
+Site hosted at neuroplasticcreative.com via GitHub Pages.
 
 ## TODO
 
-- Change h1 typeface to contrast with body
-- Add more padding to section titles
-- Restrict line length
-- Colours?
-- Improve nav bar
+- Block AI/bots
+- Make repo public again
 - Make it actually responsive
-- Use CSS Grid?
-- Brutalism?
-- Make it nicer. http://practicaltypography.com/
